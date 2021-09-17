@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       mysql:
-        image: percona/percona-xtradb-cluster:8.0
+        image: mysql:8
         env:
           MYSQL_ROOT_PASSWORD: password
         ports:
@@ -31,11 +31,9 @@ jobs:
     container: ubuntu:latest
     services:
       mysql:
-        image: percona/percona-xtradb-cluster:8.0
+        image: mysql:8
         env:
           MYSQL_ROOT_PASSWORD: password
-        ports:
-          - 3306:3306
 
     steps:
       - name: Install mysql client
