@@ -23,7 +23,8 @@ jobs:
             --host=127.0.0.1 \
             --user=root \
             --password=password \
-            --execute '\q'
+            --execute "SHOW DATABASES;"
+
 
   test-container:
     runs-on: ubuntu-latest
@@ -47,4 +48,4 @@ jobs:
             --host=mysql \
             --user=root \
             --password=password \
-            --execute '\q'
+            --execute "SHOW DATABASES;"
